@@ -7,7 +7,7 @@ This project demonstrates backend development concepts such as authentication, a
 ## Live Links
 
 **Frontend:**  
-https://basic-task-manager-wdb9.vercel.app/login
+https://basic-task-manager-wdb9-22s3q5rqa-abhishek3561s-projects.vercel.app/register
 
 **Backend API:**  
 https://basic-task-manager-chi.vercel.app/
