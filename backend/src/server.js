@@ -37,6 +37,11 @@ const errorMiddleware =
     "./middleware/errorMiddleware"
   );
 
+  const sanitize = require(
+  "./middleware/sanitize"
+);
+
+
 const app = express();
 
 connectDB();
@@ -46,6 +51,9 @@ app.use(helmet());
 app.use(morgan("dev"));
 
 app.use(express.json());
+
+app.use(sanitize);
+
 
 app.use(
   "/api/v1/auth",
