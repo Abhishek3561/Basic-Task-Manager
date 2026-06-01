@@ -12,12 +12,10 @@ const swaggerOptions = {
 
     servers: [
       {
-        url: "https://basic-task-manager-chi.vercel.app",
-        description: "Production Server",
-      },
-      {
-        url: "http://localhost:5000",
-        description: "Local Server",
+        url:
+          process.env.NODE_ENV === "production"
+            ? "https://basic-task-manager-chi.vercel.app"
+            : "http://localhost:5000",
       },
     ],
   },
