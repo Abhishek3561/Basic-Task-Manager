@@ -1,60 +1,95 @@
 # Basic Task Manager
 
-A simple full-stack Task Manager application built using React, Node.js, Express, and MongoDB.
+A full-stack Task Management application built with React, Node.js, Express, and MongoDB. The application allows users to securely register, log in, and manage their tasks through a clean and responsive interface.
 
-The goal of this project was to create a secure task management system where users can register, log in, and manage their tasks. Authentication is handled using JWT, and user passwords are securely hashed before being stored in the database.
+This project demonstrates backend development concepts such as authentication, authorization, API design, database management, security practices, and frontend integration.
 
-## Live Demo
+## Live Links
 
-**Frontend:** YOUR_FRONTEND_URL
+**Frontend:**  
+https://basic-task-manager-wdb9.vercel.app/login
 
-**Backend API:** https://basic-task-manager-chi.vercel.app/
+**Backend API:**  
+https://basic-task-manager-chi.vercel.app/
 
-**GitHub Repository:** https://github.com/Abhishek3561/Basic-Task-Manager
+**Swagger Documentation:**  
+https://basic-task-manager-chi.vercel.app/api-docs
+
+**GitHub Repository:**  
+https://github.com/Abhishek3561/Basic-Task-Manager
 
 ---
 
 ## Features
 
-* User Registration and Login
-* JWT Authentication
-* Protected Routes
-* Create, Read, Update and Delete Tasks
-* MongoDB Database Integration
-* Role-Based Access Control
-* Swagger API Documentation
-* Responsive Frontend built with React
+### Authentication & Authorization
+- User Registration
+- User Login
+- JWT Authentication
+- Password Hashing using bcryptjs
+- Protected Routes
+- Role-Based Access Control (User/Admin)
+
+### Task Management
+- Create Tasks
+- View Tasks
+- Update Tasks
+- Delete Tasks
+- User-Specific Task Access
+
+### Security
+- Password Hashing
+- JWT-Based Authentication
+- Input Validation using express-validator
+- Input Sanitization
+- Environment Variable Management
+- Helmet Security Middleware
+
+### API & Backend
+- RESTful API Design
+- API Versioning (/api/v1)
+- Centralized Error Handling
+- Swagger API Documentation
+- Modular Project Structure
+- Request Logging using Morgan
+
+### Frontend
+- React + Vite
+- Protected Dashboard
+- Authentication Flow
+- CRUD Operations for Tasks
+- API Integration using Axios
+- Success & Error Handling
 
 ---
 
 ## Tech Stack
 
 ### Frontend
-
-* React
-* Vite
-* React Router DOM
-* Axios
+- React.js
+- Vite
+- React Router DOM
+- Axios
 
 ### Backend
-
-* Node.js
-* Express.js
-* MongoDB Atlas
-* Mongoose
-* JWT Authentication
-* bcryptjs
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+- JWT
+- bcryptjs
+- express-validator
+- Swagger
 
 ### Deployment
-
-* Vercel
-* MongoDB Atlas
+- Vercel (Frontend)
+- Vercel (Backend)
+- MongoDB Atlas
 
 ---
 
 ## Project Structure
 
-```text
 Basic-Task-Manager
 │
 ├── backend
@@ -64,7 +99,9 @@ Basic-Task-Manager
 │   │   ├── middleware
 │   │   ├── models
 │   │   ├── routes
-│   │   └── swagger
+│   │   ├── swagger
+│   │   ├── validators
+│   │   └── server.js
 │   │
 │   ├── .env.example
 │   ├── package.json
@@ -74,48 +111,39 @@ Basic-Task-Manager
 │   ├── src
 │   │   ├── components
 │   │   ├── pages
-│   │   └── services
+│   │   ├── services
+│   │   ├── App.jsx
+│   │   └── main.jsx
 │   │
 │   ├── package.json
 │   └── vite.config.js
 │
 └── README.md
-```
 
 ---
 
 ## API Endpoints
 
 ### Authentication
-
-```http
-POST /api/v1/auth/register
-POST /api/v1/auth/login
-```
+- POST `/api/v1/auth/register`
+- POST `/api/v1/auth/login`
 
 ### Tasks
-
-```http
-GET    /api/v1/tasks
-POST   /api/v1/tasks
-PUT    /api/v1/tasks/:id
-DELETE /api/v1/tasks/:id
-```
+- GET `/api/v1/tasks`
+- POST `/api/v1/tasks`
+- PUT `/api/v1/tasks/:id`
+- DELETE `/api/v1/tasks/:id`
 
 ### Admin
-
-```http
-GET    /api/v1/admin/users
-GET    /api/v1/admin/tasks
-DELETE /api/v1/admin/tasks/:id
-```
+- GET `/api/v1/admin/users`
+- GET `/api/v1/admin/tasks`
+- DELETE `/api/v1/admin/tasks/:id`
 
 ---
 
-## Running Locally
+## Local Setup
 
-### Clone the Repository
-
+### Clone Repository
 ```bash
 git clone https://github.com/Abhishek3561/Basic-Task-Manager.git
 ```
@@ -150,31 +178,66 @@ JWT_SECRET=your_secret_key
 
 ---
 
+## Assignment Requirements Covered
+
+### Backend
+
+* User Registration & Login APIs
+* Password Hashing
+* JWT Authentication
+* Role-Based Access Control
+* CRUD APIs for Tasks
+* API Versioning
+* Error Handling
+* Validation & Sanitization
+* Swagger Documentation
+* MongoDB Database Integration
+
+### Frontend
+
+* React-Based UI
+* Authentication Screens
+* Protected Dashboard
+* CRUD Operations
+* API Integration
+* Error & Success Messages
+
+### Security & Scalability
+
+* Secure Password Storage
+* JWT Authentication
+* Input Validation
+* Input Sanitization
+* Modular Architecture
+* Deployment Ready Structure
+* Logging Middleware
+
+---
+
 ## What I Learned
 
-While building this project, I gained hands-on experience with:
+Through this project, I gained practical experience with:
 
 * Building REST APIs using Express.js
 * Working with MongoDB and Mongoose
 * Implementing JWT Authentication
-* Protecting routes and managing user sessions
-* Connecting a React frontend with a Node.js backend
+* Securing applications with hashing and validation
+* Connecting React applications with backend APIs
 * Deploying full-stack applications on Vercel
-* Managing environment variables and project structure
+* Organizing scalable backend architectures
 
 ---
 
 ## Future Improvements
 
-Some features I would like to add in the future:
-
-* Task priorities
-* Due dates
-* Search and filtering
-* User profile management
-* Password reset functionality
-* Better UI/UX
-* Dark mode support
+* Task Priorities
+* Due Dates
+* Search & Filtering
+* Pagination
+* Password Reset
+* Email Verification
+* Dark Mode
+* Real-Time Updates
 
 ---
 
@@ -183,5 +246,7 @@ Some features I would like to add in the future:
 **Abhishek Tyagi**
 
 GitHub: https://github.com/Abhishek3561
+
+
 
 ---
